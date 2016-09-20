@@ -6012,9 +6012,8 @@ a.reset_time {
         content: '';
         position: absolute;
         display: block;
-        margin-top: -1px;
         left: -20px;
-        top: 50%;
+        top: 14px;
         width: 6px;
         height: 6px;
         background-color: #70bb2a;
