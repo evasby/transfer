@@ -48,6 +48,7 @@
 		display: inline-block;
 		line-height: 38px;
 		margin-left: 23px;
+		margin-bottom: 16px;
 		.fixed &{
 			margin: 0 0 0 22px;
 			@include m1170{
@@ -67,7 +68,7 @@
 		}
 		p{
 			background-color: #f7f7f7;
-			margin: 16px 0 16px 24px!important;
+			margin: 0 0 0 24px!important;
 			padding: 0 38px;
 			border-radius: 21px;
 			.fixed &{
@@ -102,6 +103,9 @@
 			background: #fff url('../images/icons.png') right top no-repeat;
 			border: 1px solid #d1d1d1;
 			border-radius: 50%;
+		}
+		p{
+			margin-bottom: 0;
 		}
 	}
 	&_skype{
