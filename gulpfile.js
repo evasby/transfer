@@ -49,7 +49,7 @@ gulp.task('css', function () {
     }))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('app/css'))
-    .pipe(gulp.dest('d:/OpenServer/domains/transfer/sites/all/themes/transfer/css'))
+    //.pipe(gulp.dest('d:/OpenServer/domains/transfer/sites/all/themes/transfer/css'))
     .pipe(connect.reload())
     .pipe(notify('CSS - Done!'));
 });

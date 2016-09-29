@@ -86,7 +86,12 @@
 				font-family: $italic;
 			}
 		}
-		
+		ul{
+			min-height: 61px;
+			@include m980{
+				min-height: 0;
+			}
+		}
 	}
 	&_bottom{
 		position: relative;

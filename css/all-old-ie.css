@@ -5375,6 +5375,11 @@ a.reset_time {
           padding: 0 10px; } }
       .info_fastcall p em {
         font-family: "italic"; }
+    .info_fastcall ul {
+      min-height: 61px; }
+      @media all and (max-width: 980px) {
+        .info_fastcall ul {
+          min-height: 0; } }
   .info_bottom {
     position: relative;
     border-left: 1px solid #d1d1d1;
