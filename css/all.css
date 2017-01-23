@@ -6555,6 +6555,7 @@ a.reset_time {
         padding: 10px 10px 0; } }
 
 .footer {
+  padding: 0 0 20px;
   overflow: hidden; }
   .footer_left {
     float: left;
@@ -6635,7 +6636,7 @@ a.reset_time {
 .wfs {
   display: inline-block;
   background: transparent url("../images/wfs.png") left top no-repeat;
-  margin: 64px 0 0 107px;
+  margin: 40px 0 0 107px;
   padding: 3px 0 0 116px;
   height: 22px;
   text-decoration: none;
