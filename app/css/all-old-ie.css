@@ -4837,6 +4837,8 @@ pre {
 .fs-scrollbar.fs-light .fs-scrollbar-handle {
   width: 17px;
   height: 24px;
+  min-height: 34px;
+  margin-top: -10px;
   right: 0px;
   background: #70bb2a;
   border: 1px solid #70bb2a;
@@ -5298,7 +5300,7 @@ a.reset_time {
       opacity: 0.8; }
 
 .info {
-  margin: 33px 0 47px 20px;
+  margin: 33px 0 10px 20px;
   position: relative; }
   @media all and (max-width: 980px) {
     .info {
@@ -5343,7 +5345,7 @@ a.reset_time {
     display: inline-block;
     line-height: 38px;
     margin-left: 23px;
-    margin-bottom: 16px; }
+    margin-bottom: 10px; }
     .fixed .info p {
       margin: 0 0 0 22px; }
       @media all and (max-width: 1170px) {
@@ -5375,11 +5377,9 @@ a.reset_time {
           padding: 0 10px; } }
       .info_fastcall p em {
         font-family: "italic"; }
-    .info_fastcall ul {
-      min-height: 61px; }
-      @media all and (max-width: 980px) {
-        .info_fastcall ul {
-          min-height: 0; } }
+    @media all and (max-width: 980px) {
+      .info_fastcall ul {
+        min-height: 0; } }
   .info_bottom {
     position: relative;
     border-left: 1px solid #d1d1d1;
@@ -5400,7 +5400,7 @@ a.reset_time {
       margin-bottom: 0; }
   .info_skype {
     display: inline-block;
-    padding-right: 76px;
+    padding-right: 143px;
     margin-right: 66px;
     position: relative; }
     @media all and (max-width: 980px) {
@@ -5462,7 +5462,7 @@ a.reset_time {
 .infofront {
   background-color: #70bb2a;
   text-align: center;
-  padding: 43px 70px 40px; }
+  padding: 15px 15px 20px; }
   @media all and (max-width: 980px) {
     .infofront {
       padding: 20px 35px 20px; } }
@@ -5472,8 +5472,8 @@ a.reset_time {
   .infofront_title {
     font-family: "bold";
     color: #fff;
-    font-size: 43px;
-    margin-bottom: 33px; }
+    font-size: 30px;
+    margin-bottom: 10px; }
     @media all and (max-width: 480px) {
       .infofront_title {
         font-size: 30px;
@@ -5481,7 +5481,40 @@ a.reset_time {
   .infofront p {
     font-family: "regular";
     color: #fff;
-    line-height: 1.65; }
+    line-height: 1.1;
+    font-size: 16px; }
+
+.callback {
+  text-align: right;
+  padding: 10px 10px; }
+  @media all and (max-width: 980px) {
+    .callback {
+      text-align: center; } }
+  .callback_link {
+    display: inline-block;
+    background-color: #565656;
+    padding: 8px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "medium";
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 45px;
+    border-radius: 45px;
+    margin: 0 0 0 0;
+    font-size: 18px;
+    font-family: "medium"; }
+    .callback_link:link {
+      color: #fff; }
+    .callback_link:visited {
+      color: #fff; }
+    .callback_link:active {
+      color: #fff; }
+    .callback_link:hover {
+      color: #70bb2a; }
+    .callback_link:hover {
+      background-color: #fff; }
 
 .main {
   padding: 56px 0 0 0; }
@@ -5494,6 +5527,20 @@ a.reset_time {
 .select {
   max-width: 1170px;
   margin: 0 auto; }
+  .select_clear {
+    *zoom: 1;
+    position: relative;
+    padding: 0 0 40px; }
+    .select_clear:before, .select_clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .select_clear:after {
+      clear: both; }
+    @media all and (max-width: 980px) {
+      .select_clear {
+        padding: 0; } }
   .select_view__loading {
     height: 200px;
     background: url("../images/cube.gif") 50% 50% no-repeat;
@@ -5515,38 +5562,58 @@ a.reset_time {
     text-align: center;
     max-width: 48.5%;
     padding: 20px 0 20px;
-    margin-bottom: 60px; }
+    margin-bottom: 30px; }
     @media all and (max-width: 980px) {
       .select_title {
+        margin-bottom: 60px;
         max-width: none; } }
   .select_buttons {
-    text-align: center;
     overflow: hidden;
     position: relative;
-    margin-bottom: 72px; }
+    padding: 0 0 0 165px;
+    float: left;
+    width: 50%; }
     .select_buttons:before {
       content: '';
       position: absolute;
-      top: 16px;
-      left: 10%;
-      right: 10%;
+      top: 0;
+      left: 181px;
+      right: 0;
       display: block;
       z-index: 1;
-      height: 1px;
+      height: 128px;
+      width: 1px;
       background-color: #d6d6d6; }
       @media all and (max-width: 980px) {
         .select_buttons:before {
+          height: 1px;
+          width: auto;
+          top: 16px;
           left: 17%;
           right: 17%; } }
     @media all and (max-width: 980px) {
       .select_buttons {
-        margin-bottom: 35px; } }
+        text-align: center;
+        margin-bottom: 35px;
+        padding: 0;
+        float: none;
+        width: auto; } }
     @media all and (max-width: 480px) {
       .select_buttons {
         margin-bottom: 15px; } }
+  .select_right {
+    float: left;
+    width: 50%; }
+    @media all and (max-width: 980px) {
+      .select_right {
+        float: none;
+        width: auto; } }
   .select_wrap {
     *zoom: 1;
-    margin: 0 -95px 0 -125px; }
+    /*margin: 0 -95px 0 -125px;
+		@include m980{
+			margin: 0;
+		}*/ }
     .select_wrap:before, .select_wrap:after {
       content: ".";
       display: block;
@@ -5554,15 +5621,12 @@ a.reset_time {
       overflow: hidden; }
     .select_wrap:after {
       clear: both; }
-    @media all and (max-width: 980px) {
-      .select_wrap {
-        margin: 0; } }
   .select_button {
-    float: left;
-    width: 33.33%;
+    display: block;
     position: relative;
     cursor: pointer;
-    padding-top: 63px;
+    margin: 0 0 30px;
+    padding: 7px 0 0 50px;
     font-family: "regular"; }
     .select_button:before {
       content: '';
@@ -5575,9 +5639,8 @@ a.reset_time {
       border-radius: 50%;
       position: absolute;
       z-index: 1;
-      left: 50%;
-      top: 0;
-      margin-left: -13px; }
+      left: 0;
+      top: 0; }
     .select_button:hover:after, .select_button__active:after {
       content: '';
       display: inline-block;
@@ -5588,9 +5651,21 @@ a.reset_time {
       border-radius: 50%;
       position: absolute;
       z-index: 1;
-      left: 50%;
+      left: 0;
       top: 8px;
-      margin-left: -5px; }
+      margin-left: 8px; }
+    @media all and (max-width: 980px) {
+      .select_button {
+        margin: 0;
+        padding: 63px 0 0;
+        float: left;
+        width: 33.33%; }
+        .select_button:before {
+          left: 50%;
+          margin-left: -13px; }
+        .select_button:hover:after, .select_button__active:after {
+          left: 50%;
+          margin-left: -5px; } }
   .select_tab {
     *zoom: 1; }
     .select_tab:before, .select_tab:after {
@@ -5649,14 +5724,19 @@ a.reset_time {
       clear: both; }
     .select_row__time {
       display: none; }
-    @media all and (max-width: 980px) {
-      .select_row__submit {
-        padding-top: 10px; } }
+    .select_row__submit {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+      @media all and (max-width: 980px) {
+        .select_row__submit {
+          position: static;
+          padding-top: 10px; } }
   .select_item {
     float: left;
     *zoom: 1;
-    margin-right: 24px;
-    margin-bottom: 39px;
+    margin: 0 0 10px 0;
     height: 44px;
     position: relative; }
     .select_item:before, .select_item:after {
@@ -5666,6 +5746,9 @@ a.reset_time {
       overflow: hidden; }
     .select_item:after {
       clear: both; }
+    .select_item__checkbox {
+      margin: 0 0 10px 120px;
+      top: -2px; }
     @media all and (max-width: 980px) {
       .select_item {
         margin: 0 0 10px;
@@ -5762,7 +5845,7 @@ a.reset_time {
       border-radius: 50%;
       position: absolute;
       left: 0;
-      top: 3px; }
+      top: 1px; }
       @media all and (max-width: 980px) {
         .select input[type="checkbox"] + label:before {
           top: 0; } }
@@ -5777,7 +5860,7 @@ a.reset_time {
     border-radius: 50%;
     position: absolute;
     left: 5px;
-    top: 8px; }
+    top: 6px; }
     @media all and (max-width: 980px) {
       .select input[type="checkbox"]:checked + label:after {
         top: 5px; } }

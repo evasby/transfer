@@ -1,5 +1,5 @@
 .info{
-	margin: 33px 0 47px 20px;
+	margin: 33px 0 10px 20px;
 	position: relative;
 	@include m980{
 		margin: 0 0 15px 15px;
@@ -48,7 +48,7 @@
 		display: inline-block;
 		line-height: 38px;
 		margin-left: 23px;
-		margin-bottom: 16px;
+		margin-bottom: 10px;
 		.fixed &{
 			margin: 0 0 0 22px;
 			@include m1170{
@@ -87,7 +87,7 @@
 			}
 		}
 		ul{
-			min-height: 61px;
+			//min-height: 61px;
 			@include m980{
 				min-height: 0;
 			}
@@ -115,7 +115,7 @@
 	}
 	&_skype{
 		display: inline-block;
-		padding-right: 76px;
+		padding-right: 143px;
 		margin-right: 66px;
 		position: relative;
 		@include m980{

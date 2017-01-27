@@ -1,0 +1,24 @@
+.callback{
+	text-align: right;
+	padding: 10px 10px;
+	@include m980{
+		text-align: center;
+	}
+	&_link{
+		display: inline-block;
+		background-color: #565656;
+		padding: 8px 10px;
+		@include link(#fff, $lc);
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $bold;
+		box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+		border-radius: 45px;
+		margin: 0 0 0 0;
+		font-size: 18px;
+		font-family: $bold;
+		&:hover{
+			background-color: #fff;
+		}	
+	}
+}

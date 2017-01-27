@@ -1,6 +1,14 @@
 .select{
 	max-width: 1170px;
 	margin: 0 auto;
+	&_clear{
+		@include clearfix;
+		position: relative;
+		padding: 0 0 40px;
+		@include m980{
+			padding: 0;
+		}
+	}
 	&_view{
 		&__loading{
 			height: 200px;
@@ -26,51 +34,70 @@
 		text-align: center;
 		max-width: 48.5%;
 		padding: 20px 0 20px;
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 		@include m980{
+			margin-bottom: 60px;
 			max-width: none;
 		}
 	}
 	&_buttons{
-		text-align: center;
 		overflow: hidden;
 		position: relative;
-		margin-bottom: 72px;
+		//margin-bottom: 72px;
+		padding: 0 0 0 165px;
+		float: left;
+		width: 50%;
 		&:before{
 			content: '';
 			position: absolute;
-			top: 16px;
-			left: 10%;
-			right: 10%;
+			top: 0;
+			left: 181px;
+			right: 0;
 			display: block;
 			z-index: 1;
-			height: 1px;
+			height: 128px;
+			width: 1px;
 			background-color: #d6d6d6;
 			@include m980{
+				height: 1px;
+				width: auto;
+				top: 16px;
 				left: 17%;
 				right: 17%;
 			}
 		}
 		@include m980{
+			text-align: center;
 			margin-bottom: 35px;
+			padding: 0;
+			float: none;
+			width: auto;
 		}
 		@include m480{
 			margin-bottom: 15px;
 		}
 	}
-	&_wrap{
-		@include clearfix;
-		margin: 0 -95px 0 -125px;
+	&_right{
+		float: left;
+		width: 50%;
 		@include m980{
-			margin: 0;
+			float: none;
+			width: auto;
 		}
 	}
+	&_wrap{
+		@include clearfix;
+		/*margin: 0 -95px 0 -125px;
+		@include m980{
+			margin: 0;
+		}*/
+	}
 	&_button{
-		float: left;
-		width: 33.33%;
+		display: block;
 		position: relative;
 		cursor: pointer;
-		padding-top: 63px;
+		margin: 0 0 30px;
+		padding: 7px 0 0 50px;
 		font-family: $regular;
 		&:before{
 			content: '';
@@ -82,9 +109,9 @@
 	    border-radius: 50%;
 	    position: absolute;
 	    z-index: 1;
-	    left: 50%;
+	    left: 0;
 	    top: 0;
-	    margin-left: -13px;
+	    
 		}
 		&:hover,
 		&__active{
@@ -97,9 +124,26 @@
 		    border-radius: 50%;
 		    position: absolute;
 		    z-index: 1;
-		    left: 50%;
+		    left: 0;
 		    top: 8px;
-		    margin-left: -5px;
+		    margin-left: 8px;   
+			}
+		}
+		@include m980{
+			margin: 0;
+			padding: 63px 0 0;
+			float: left;
+			width: 33.33%;
+			&:before{
+				left: 50%;
+				margin-left: -13px;			
+			}
+			&:hover,
+			&__active{
+				&:after{
+					left: 50%;
+					margin-left: -5px;
+				}
 			}
 		}
 	}
@@ -143,7 +187,12 @@
 			display: none;
 		}
 		&__submit{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
 			@include m980{
+				position: static;
 				padding-top: 10px;
 			}
 		}
@@ -151,10 +200,13 @@
 	&_item{
 		float: left;
 		@include clearfix;
-		margin-right: 24px;
-		margin-bottom: 39px;
+		margin: 0 0 10px 0;
 		height: 44px;
 		position: relative;
+		&__checkbox{
+			margin: 0 0 10px 120px;
+			top: -2px;
+		}
 		@include m980{
 			margin: 0 0 10px;
 			float: none;
@@ -259,7 +311,7 @@
 	    border-radius: 50%;
 	    position: absolute;
 	    left: 0;
-	    top: 3px;
+	    top: 1px;
 	    @include m980{
 				top: 0;
 			}
@@ -276,7 +328,7 @@
 	    border-radius: 50%;
 	    position: absolute;
 	    left: 5px;
-	    top: 8px;
+	    top: 6px;
 	    @include m980{
 				top: 5px;
 			}
